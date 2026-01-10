@@ -1,21 +1,25 @@
+export type ValueOf<T> = T[keyof T]
+
 export type MCIdentifier = `${string}:${string}`
 
 export type GTJSONRecipeChanced = {
-    chance: number
-    maxChance: number
-    tierChanceBoost: number
+    chance?: number
+    maxChance?: number
 }
 export type GTJSONRecipeChancedContents<Content> = ({content: Content} & GTJSONRecipeChanced)[]
 
 export type GTJSONRecipeItemIngredient = {
-    item: MCIdentifier
+    item: Special.Item
 } | {
-    tag: MCIdentifier
+    tag: string
 } | {
     type: "forge:nbt"
     item: MCIdentifier
     count: number
     nbt: object
+} | {
+    type: "gtceu:circuit"
+    configuration: number
 }
 
 export type GTJSONRecipeItem = {
@@ -53,11 +57,16 @@ export type GTJSONRecipeCondition = {
     research: [{
         researchId: string
         dataItem: {
-            id: MCIdentifier
+            id: Special.Item
             Count: number
             tag: object
         }
     }]
+}
+
+export type GTJSONRecipeChanceLogics = {
+    item?: string
+    // TODO?
 }
 
 export type GTJSONRecipe = {
@@ -85,12 +94,17 @@ export type GTJSONRecipe = {
     }
     // All fields above are 100% complete
 
-    recipeConditions?: GTJSONRecipeCondition[]
+    recipeConditions?: (GTJSONRecipeCondition | ValueOf<{
+        [T in GTJSONRecipeCondition['type']]: {
+            type: T
+            data: Omit<GTJSONRecipeCondition & { type: T }, "type">
+        }
+    }>)[]
+
+    inputChanceLogics?: GTJSONRecipeChanceLogics
+    outputChanceLogics?: GTJSONRecipeChanceLogics
 
     // TODO these when needed
-    inputChanceLogics: unknown
-    outputChanceLogics: unknown
-
     tickInputChanceLogics: unknown
     tickOutputChanceLogics: unknown
 

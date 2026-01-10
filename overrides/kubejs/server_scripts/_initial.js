@@ -42,9 +42,6 @@ const compacting = (ev, output, input, make_uncompacting) => {
 const JSONObject = Java.loadClass("com.google.gson.JsonObject")
 // Required to use fluid tags in gregtech recipes
 const FluidIngredientJS = Java.loadClass("com.gregtechceu.gtceu.integration.kjs.recipe.components.GTRecipeComponents$FluidIngredientJS")
-// Required for the rock breaker
-const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.condition.RockBreakerCondition")
-
 // Tier enums for easier data handling
 const TIER_ULV = 0; // ulv
 const TIER_LV = 1;
@@ -56,6 +53,9 @@ const TIER_LUV = 6;
 const TIER_ZPM = 7;
 const TIER_UV = 8;
 const TIER_UHV = 9;
+const TIER_UEV = 10;
+const TIER_MAX = 11;
+const TIER_END = 12;
 const TIER_ID_MAPPING = [
-    "ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV"
+    "ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV", "UEV", "MAX", "END"
 ]

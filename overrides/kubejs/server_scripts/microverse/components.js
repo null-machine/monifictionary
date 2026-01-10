@@ -3,6 +3,14 @@
  * Each of these are a custom KubeJS item or block used in the creation of Micro Miners.
  */
 ServerEvents.recipes(event => {
+    // Universe Creation Data
+    event.recipes.gtceu.scanner("universe_creation_data_hydrogen")
+        .itemInputs("gtceu:data_stick")
+        .inputFluids("gtceu:hydrogen 16000")
+        .itemOutputs("kubejs:universe_creation_data")
+        .duration(100)
+        .EUt(GTValues.VA[GTValues.HV])
+
     // Basic Guidance
     event.shaped("kubejs:basic_micro_miner_guidance_system", [
         "GPG",
@@ -76,29 +84,17 @@ ServerEvents.recipes(event => {
         S: "gtceu:ev_sensor"
     })
 
-    // Warp Core
-    event.shaped("kubejs:universal_warp_core", [
-        "LTL",
-        "TNT",
-        "LTL"
-    ], {
-        L: "gtceu:void_empowered_block",
-        N: "kubejs:warp_core",
-        T: "kubejs:bathyal_energy_core"
-    })
+    // Universal Warp Core
+    event.recipes.gtceu.discharger("universal_warp_core")
+        .itemInputs("4x gtceu:void_block", "kubejs:warp_core", Item.of("kubejs:abyssal_energy_core", "{Damage:4000000}").weakNBT(), Item.of("kubejs:abyssal_energy_core", "{Damage:4000000}").weakNBT(), Item.of("kubejs:abyssal_energy_core", "{Damage:4000000}").weakNBT(), Item.of("kubejs:abyssal_energy_core", "{Damage:4000000}").weakNBT())
+        .itemOutputs("kubejs:universal_warp_core")
+        .duration(10)
 
-    // Warp Controller
-    event.shaped("kubejs:universal_warp_controller", [
-        "SMS",
-        "CHC",
-        "SFS"
-    ], {
-        C: "#gtceu:circuits/luv",
-        H: "kubejs:warp_controller",
-        M: "kubejs:abyssal_energy_core",
-        F: "extendedcrafting:the_ultimate_catalyst",
-        S: "gtceu:void_empowered_block"
-    })
+    // Universal Warp Controller
+    event.recipes.gtceu.discharger("universal_warp_controller")
+        .itemInputs("4x gtceu:double_naquadria_plate", "2x #gtceu:circuits/luv", "kubejs:warp_controller", Item.of("kubejs:hadal_energy_core", "{Damage:8000000}").weakNBT())
+        .itemOutputs("kubejs:universal_warp_controller")
+        .duration(10)
 
     // Warp engine
     event.recipes.gtceu.assembly_line("warp_engine")
@@ -112,7 +108,7 @@ ServerEvents.recipes(event => {
             "kubejs:dark_soularium_thruster")
         ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack("ae2:quantum_ring").EUt(480).duration(1200))
         .itemOutputs("kubejs:warp_engine")
-        .inputFluids("gtceu:soldering_alloy 1152")
+        .inputFluids("gtceu:advanced_soldering_alloy 576")
         .duration(1800)
         .EUt(30720)
 
@@ -135,9 +131,9 @@ ServerEvents.recipes(event => {
             "2x gtceu:dense_naquadah_alloy_plate",
             "4x gtceu:enriched_naquadah_trinium_europium_duranide_quadruple_wire",
             "64x gtceu:fine_tritanium_wire")
-        .inputFluids("gtceu:soldering_alloy 1152", "gtceu:naquadria 576")
+        .inputFluids("gtceu:living_soldering_alloy 576", "gtceu:naquadria 576")
         .itemOutputs("kubejs:universal_navigator")
-        .stationResearch(b => b.researchStack("kubejs:stellar_creation_data").CWUt(96, 384000).EUt(491520))
+        .stationResearch(b => b.researchStack("gtceu:gravi_star").CWUt(96, 384000).EUt(491520))
         .duration(6000)
         .EUt(491520)
 
@@ -146,14 +142,14 @@ ServerEvents.recipes(event => {
         .itemInputs("gtceu:infinity_frame",
             "4x kubejs:universal_navigator",
             "4x gtceu:uev_field_generator",
-            "24x gtceu:holmium_plate",
-            "4x #gtceu:circuits/uiv",
-            "2x gtceu:uiv_sensor",
-            "2x gtceu:uiv_emitter",
+            "24x gtceu:necrosiderite_plate",
+            "4x #gtceu:circuits/uev",
+            "2x gtceu:uev_sensor",
+            "2x gtceu:uev_emitter",
             "4x gtceu:dense_naquadah_alloy_plate",
-            "8x gtceu:activated_netherite_quadruple_wire",
+            "64x gtceu:fine_necrosiderite_wire",
             "32x gtceu:fine_ruthenium_trinium_americium_neutronate_wire")
-        .inputFluids("gtceu:soldering_alloy 11520", "gtceu:crystal_matrix 5760", "gtceu:naquadria 2304")
+        .inputFluids("gtceu:living_soldering_alloy 5760", "monilabs:crystal_matrix 5760", "gtceu:naquadria 2304")
         .itemOutputs("kubejs:extradimensional_navigator")
         .stationResearch(b => b.researchStack("kubejs:universal_navigator").CWUt(160, 640000).EUt(3932160))
         .duration(6000)
@@ -247,7 +243,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.assembler("basic_drilling_kit")
         .itemOutputs("kubejs:basic_drilling_kit")
         .itemInputs("3x gtceu:double_steel_plate", "gtceu:mv_electric_motor", "2x #gtceu:circuits/lv", "2x minecraft:glass")
-        .inputFluids("gtceu:glue 288")
+        .inputFluids("gtceu:glue 200")
         .EUt(GTValues.VA[GTValues.HV])
         .duration(300)
 
@@ -308,13 +304,13 @@ ServerEvents.recipes(event => {
         .itemInputs(
             "8x ae2:singularity",
             "4x gtceu:gravi_star",
-            "kubejs:hadal_energy_core",
+            Item.of("kubejs:hadal_energy_core", "{Damage:8000000}").weakNBT(),
             "gtceu:zpm_field_generator",
             "12x redstone_arsenal:flux_plating",
             "16x gtceu:enderium_foil",
             "16x gtceu:darmstadtium_bolt",
             "5x gtceu:fusion_glass")
-        .inputFluids("gtceu:soldering_alloy 1728", "gtceu:naquadria 576", "gtceu:polybenzimidazole 288")
+        .inputFluids("gtceu:living_soldering_alloy 864", "gtceu:naquadria 576", "gtceu:polybenzimidazole 288")
         .duration(1000)
         .EUt(GTValues.VA[GTValues.UV])
         .stationResearch(builder => builder
@@ -334,8 +330,8 @@ ServerEvents.recipes(event => {
             "4x kubejs:universe_resistant_neutronium_heavy_plating",
             "12x gtceu:styrene_butadiene_rubber_foil"
         )
-        .inputFluids("gtceu:soldering_alloy 2304", "gtceu:crystal_matrix 576", "gtceu:microversium 1152")
-        .duration(4000)
+        .inputFluids("gtceu:living_soldering_alloy 1152", "monilabs:crystal_matrix 576", "gtceu:microversium 1152")
+        .duration(1000)
         .EUt(GTValues.VA[GTValues.UHV])
         .stationResearch(builder => builder
             .researchStack("kubejs:gravitational_amplifier")

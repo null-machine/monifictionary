@@ -5,12 +5,12 @@
 ServerEvents.recipes(event => {
     event.recipes.gtceu.assembler("high_power_casing")
         .itemInputs(
-            "#forge:frames/iridium",
-            "6x #forge:plates/iridium",
-            "#gtceu:circuits/ev",
-            "16x #forge:fine_wires/cobalt",
-            "16x #forge:fine_wires/copper",
-            "2x gtceu:platinum_single_wire",
+            "#forge:frames/stainless_steel",
+            "6x #forge:plates/platinum",
+            "#gtceu:circuits/hv",
+            "8x #forge:fine_wires/iridium",
+            "8x #forge:fine_wires/neptunium_palladium_aluminium",
+            "2x gtceu:osmium_single_wire",
         )
         .itemOutputs("2x gtceu:high_power_casing")
         .duration(100).EUt(GTValues.VA[GTValues.EV])
@@ -26,5 +26,12 @@ ServerEvents.recipes(event => {
         .itemOutputs("gtceu:active_transformer")
         .duration(300).EUt(GTValues.VA[GTValues.IV])
     // Lowers the voltage at which the laser pipes can be made to post plat-line IV
-    event.replaceInput({ output: "gtceu:normal_laser_pipe" }, "gtceu:osmiridium_foil", "gtceu:rhodium_foil")
+    event.recipes.gtceu.assembler("normal_laser_pipe")
+        .itemInputs(
+            "gtceu:laminated_glass",
+            "2x gtceu:rhodium_foil",
+        )
+        .inputFluids("gtceu:polytetrafluoroethylene 144")
+        .itemOutputs("gtceu:normal_laser_pipe")
+        .duration(100).EUt(GTValues.VA[GTValues.IV]).addMaterialInfo(true)
 })

@@ -36,19 +36,23 @@ ServerEvents.recipes(event => {
         }
     }
 
-    if (doHarderRecipes) {
-        event.shaped("thermal:dynamo_numismatic", [
-            " A ",
-            "BCB",
-            "DED"
+    if(doHarderRecipes) {
+        event.remove("bic_clipboard:clipboard")
+        event.shaped("bic_clipboard:clipboard", [
+            " RD",
+            "BWS",
+            "PPP",
         ], {
-            A: "kubejs:excitationcoil",
-            B: "gtceu:zeron_100_plate",
-            C: "ironfurnaces:diamond_furnace",
-            D: "enderio:vibrant_gear",
-            E: "kubejs:redstone_transmission_coil"
+            R: "#forge:screws/iron",
+            D: "#forge:tools/screwdrivers",
+            B: "#forge:bolts/iron",
+            W: "#minecraft:planks",
+            S: "#forge:springs/iron",
+            P: "#forge:paper"
         })
+    }
 
+    if (doHarderRecipes) {
         event.remove({ id: "gtceu:large_chemical_reactor/radon_from_uranium_238" })
         event.remove({ id: "gtceu:electric_blast_furnace/blast_cryolobus_gas" })
         event.remove({ id: "gtceu:circuit_assembler/wetware_board" })
@@ -111,7 +115,7 @@ ServerEvents.recipes(event => {
     }
 
     if (doMeowniPlush) {
-        event.recipes.gtceu.omnic_forge("kubejs:meowni_plush")
+        event.recipes.gtceu.forming_press("kubejs:meowni_plush")
             .itemInputs("64x kubejs:moni_dollar", "64x kubejs:moni_dollar", "64x kubejs:moni_dollar", "16x kubejs:moni_dollar",) // Not exact atm, I don't run linux (so i cant use the awk script) and this value is gonna change regardless.
             .itemOutputs("kubejs:meowni_plush")
             .duration(2000)

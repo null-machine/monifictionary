@@ -135,7 +135,7 @@ ServerEvents.recipes(event => {
         D: "gtceu:double_cryolobus_plate",
         N: "gtceu:double_naquadah_plate",
         G: "kubejs:advanced_micro_miner_guidance_system",
-        P: "kubejs:bathyal_energy_core",
+        P: Item.of("kubejs:bathyal_energy_core", "{Damage:2000000}").weakNBT(),
         A: "gtceu:luv_field_generator",
         E: "kubejs:dischargement_core",
         F: "kubejs:enderium_micro_miner_core",
@@ -155,7 +155,7 @@ ServerEvents.recipes(event => {
         " E     E "
     ], {
         G: "kubejs:advanced_micro_miner_guidance_system",
-        C: "gtceu:double_crystal_matrix_plate",
+        C: "monilabs:double_crystal_matrix_plate",
         W: "gtceu:double_rhodium_plated_palladium_plate",
         L: "kubejs:supercharged_laser_array",
         I: "gtceu:double_duranium_plate",
@@ -170,24 +170,21 @@ ServerEvents.recipes(event => {
     event.recipes.extendedcrafting.shaped_table("kubejs:microminer_t9", [
         "    Q    ",
         "    Q    ",
-        "   QUQ   ",
-        "   QAQ   ",
-        "  QPQPQ  ",
-        " QQTCTQQ ",
-        "QQBHRHBQQ",
+        "   QQQ   ",
+        "  LQAQL  ",
+        "  QQQQQ  ",
+        "LQQCQCQQL",
+        "QQBRQRBQQ",
         " QQQQQQQ ",
         "QQ W W QQ"
     ], {
         Q: "kubejs:quantum_fluxed_eternium_heavy_plating",
-        U: "kubejs:universal_navigator",
-        A: "gtceu:uv_field_generator",
+        A: "gtceu:zpm_field_generator",
         B: "gtceu:ev_super_chest",
-        P: "gtceu:plasma_large_turbine",
-        R: "kubejs:universal_warp_core",
-        T: "gtceu:tungstensteel_gearbox",
-        C: "kubejs:universal_warp_controller",
-        H: "gtceu:uv_rotor_holder",
-        W: "kubejs:hadal_warp_engine"
+        L: "kubejs:supercharged_laser_array",
+        R: "kubejs:warp_core",
+        C: "kubejs:warp_controller",
+        W: "kubejs:warp_engine"
     })
 
     // T10 Microminer
@@ -196,8 +193,8 @@ ServerEvents.recipes(event => {
         "  NN NN  ",
         "  NN NN  ",
         "  NN NN  ",
-        " NUNNNUN ",
-        "PNCNENCNP",
+        " NENNNEN ",
+        "NNCNUNCNN",
         "NNRNANRNN",
         " NNNNNNN ",
         "NW W W WN"
@@ -206,7 +203,6 @@ ServerEvents.recipes(event => {
         U: "kubejs:universal_navigator",
         R: "kubejs:universal_warp_core",
         C: "kubejs:universal_warp_controller",
-        P: "solarflux:sp_custom_neutronium",
         E: "gtceu:energy_cluster",
         A: "gtceu:iv_quantum_chest",
         W: "kubejs:hadal_warp_engine"
@@ -217,9 +213,9 @@ ServerEvents.recipes(event => {
         "   A M A   ",
         "   O M O   ",
         "  OO M OO  ",
-        " POOMMMOOP ",
+        "  OOMMMOO  ",
         " OONMMMNOO ",
-        "POOMMCMMOOP",
+        " OOMMCMMOO ",
         "OODMMIMMDOO",
         "OOBMOOOMBOO",
         "OOOOW WOOOO",
@@ -227,13 +223,12 @@ ServerEvents.recipes(event => {
         " W       W "
     ], {
         O: "kubejs:elementally_infused_omnic_matrix_heavy_plating",
-        M: "gtceu:double_crystal_matrix_plate",
-        P: "solarflux:sp_custom_neutronium",
+        M: "monilabs:double_crystal_matrix_plate",
         W: "kubejs:hadal_warp_engine",
-        A: "gtceu:uev_robot_arm",
+        A: "gtceu:uhv_robot_arm",
         C: "gtceu:uhv_quantum_chest",
         N: "kubejs:universal_navigator",
-        I: "kubejs:infinity_power_unit",
+        I: "gtceu:large_naquadah_reactor",
         B: "kubejs:universal_warp_core",
         D: "kubejs:universal_warp_controller"
     })
@@ -244,10 +239,10 @@ ServerEvents.recipes(event => {
         "    IEI    ",
         "    III    ",
         "   IISII   ",
-        "  PISQSIP  ",
+        "   ISQSI   ",
         "  IIJSJII  ",
         " IIIJCJIII ",
-        "PIIDJJJDIIP",
+        "IIIJJJJJIII",
         "IIIJJ JJIII",
         "IIWW   WWII",
         "IW       WI"
@@ -255,12 +250,10 @@ ServerEvents.recipes(event => {
         I: "kubejs:dimensionally_stabilized_infinity_heavy_plating",
         J: "kubejs:universe_resistant_neutronium_heavy_plating",
         E: "kubejs:extradimensional_navigator",
-        P: "solarflux:sp_custom_infinity",
         C: "gtceu:uhv_quantum_chest",
         W: "kubejs:hadal_warp_engine",
-        D: "kubejs:infinity_power_unit",
-        S: "kubejs:dimensional_stabilization_netherite_casing",
-        Q: "kubejs:field_stabilised_omnic_pulsar_compound"
+        S: "monilabs:dimensional_stabilization_netherite_casing",
+        Q: "kubejs:field_stabilized_prismatic_pulsar_compound"
     })
 
     //
@@ -305,30 +298,4 @@ ServerEvents.recipes(event => {
         d: "thermal:dynamo_compression",
         T: "kubejs:energetic_thruster"
     }).id("kubejs:microminer/t4half")
-
-    // T8.5  Microminer
-    event.recipes.extendedcrafting.shaped_table("kubejs:microminer_t8half", [
-        "   AAA   ",
-        "  ANNNA  ",
-        " GNTTTNG ",
-        " NNTFTNN ",
-        " NTECETN ",
-        "NNTSFSTNN",
-        "NTTQWQTTN",
-        "NTTYWYTTN",
-        " XXX XXX "
-    ], {
-        A: "kubejs:supercharged_laser_array",
-        N: "gtceu:double_naquadah_alloy_plate",
-        G: "kubejs:advanced_micro_miner_guidance_system",
-        T: "gtceu:double_trinium_plate",
-        F: "gtceu:zpm_field_generator",
-        E: "gtceu:zpm_emitter",
-        C: "kubejs:abyssal_energy_core",
-        S: "gtceu:naquadah_alloy_frame",
-        Q: "gtceu:luv_quantum_chest",
-        W: "kubejs:warp_core",
-        Y: "kubejs:warp_controller",
-        X: "kubejs:warp_engine"
-    }).id("kubejs:microminer/t8half")
 })

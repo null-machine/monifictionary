@@ -5,7 +5,7 @@ if (Platform.isLoaded("fluxnetworks")) {
     console.log("Flux Networks found, loading compat scripts...");
 
     ServerEvents.recipes(event => {
-        event.replaceInput({ id: "fluxnetworks:fluxconfigurator" }, "minecraft:obsidian", "enderio:infinity_rod");
+        event.replaceInput({ id: "fluxnetworks:fluxconfigurator" }, "minecraft:obsidian", "gtceu:dark_steel_rod");
 
         // Flux Dust
         event.recipes.gtceu.chemical_bath("fluxnetworks:flux_dust")
@@ -59,7 +59,7 @@ if (Platform.isLoaded("fluxnetworks")) {
         ], {
             R: "gtceu:enriched_naquadah_rod",
             G: "#forge:glass_panes",
-            C: "enderio:advanced_capacitor_bank",
+            C: "thermal:energy_cell",
             B: "fluxnetworks:flux_block"
         }).id("fluxnetworks:basicfluxstorage")
         event.shaped("fluxnetworks:herculean_flux_storage", [
@@ -69,7 +69,7 @@ if (Platform.isLoaded("fluxnetworks")) {
         ], {
             S: "fluxnetworks:basic_flux_storage",
             G: "#forge:glass_panes",
-            C: "gtceu:zero_point_module",
+            C: "gtceu:energy_module",
         }).id("fluxnetworks:herculeanfluxstorage")
         event.shaped("fluxnetworks:gargantuan_flux_storage", [
             "SSS",
@@ -78,7 +78,7 @@ if (Platform.isLoaded("fluxnetworks")) {
         ], {
             S: "fluxnetworks:herculean_flux_storage",
             G: "#forge:glass_panes",
-            C: "gtceu:max_battery",
+            C: "gtceu:energy_cluster",
         }).id("fluxnetworks:gargantuanfluxstorage")
 
     })

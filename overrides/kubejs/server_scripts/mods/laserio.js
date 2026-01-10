@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
 
     const Cards = [
         ["item", "gtceu:pulsating_alloy_plate"],
-        ["fluid", "gtceu:iron_plate"],
+        ["fluid", "gtceu:lazurite_plate"],
         ["energy", "gtceu:gold_plate"],
         ["redstone", "gtceu:red_alloy_plate"]
     ]
@@ -36,6 +36,15 @@ ServerEvents.recipes(event => {
                 G: "minecraft:gold_nugget",
                 T: "gtceu:tin_plate"
             }).id(`laserio:card_${card[0]}`)
+
+            // temporarily removed because LaserIO cards can't stack
+            /*
+            event.recipes.gtceu.assembler(`laserio:card_${card[0]}`)
+                .itemInputs(card[1], cardChip, "3x gtceu:tin_plate", "6x minecraft:gold_nugget")
+                .itemOutputs(`2x laserio:card_${card[0]}`)
+                .duration(80)
+                .EUt(16)
+            */
         })
 
         // Overclockers
@@ -85,8 +94,8 @@ ServerEvents.recipes(event => {
             "FFF"
         ], {
             F: "gtceu:electrum_flux_plate",
-            E: "gtceu:ev_emitter",
-            C: "#gtceu:circuits/iv",
+            E: "gtceu:iv_emitter",
+            C: "#gtceu:circuits/luv",
             R: "gtceu:red_alloy_plate"
         }).id("laserio:laser_connector_advanced")
     }

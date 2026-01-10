@@ -191,11 +191,9 @@ if (Platform.isLoaded("create")) {
             return event.recipes.gtceu.rock_breaker(`kubejs:${itemName}`)
                 .notConsumable(`${modName}:${itemName}`)
                 .itemOutputs(`${modName}:${itemName}`)
-                .addDataString("fluidA", "minecraft:lava")
-                .addDataString("fluidB", "minecraft:water")
+                ["adjacentFluid(net.minecraft.world.level.material.Fluid[])"]("minecraft:lava", "minecraft:water")
                 .duration(16)
                 .EUt(EUt)
-                .addCondition(RockBreakerCondition.INSTANCE)
         }
         rockCrushing("minecraft", "dripstone_block", 60)
         rockCrushing("minecraft", "tuff", 60)

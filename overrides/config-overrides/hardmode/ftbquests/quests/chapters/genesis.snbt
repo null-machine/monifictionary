@@ -26,13 +26,21 @@
 		{
 			id: "070539F2FEF35EF9"
 			linked_quest: "712023557B5B1812"
-			x: -4.0d
+			shape: "hexagon"
+			x: -4.5d
 			y: 15.5d
 		}
 		{
 			id: "4A1F5C2E65873DDB"
 			linked_quest: "2280472741683581"
-			x: 4.0d
+			shape: "hexagon"
+			x: 4.5d
+			y: 15.5d
+		}
+		{
+			id: "1D806F3BD32F739C"
+			linked_quest: "34876F54406B6A04"
+			x: 0.75d
 			y: 15.5d
 		}
 	]
@@ -233,7 +241,7 @@
 		}
 		{
 			dependencies: ["66FCC26399376B55"]
-			description: ["{moni.quest.07DC7FC23332B847.description1.hardmode}"]
+			description: ["{moni.quest.07DC7FC23332B847.description1}"]
 			disable_toast: true
 			icon: "gtceu:terminal"
 			id: "07DC7FC23332B847"
@@ -242,13 +250,13 @@
 				item: "gtceu:terminal"
 				type: "item"
 			}]
-			subtitle: "{moni.quest.07DC7FC23332B847.subtitle.hardmode}"
+			subtitle: "{moni.quest.07DC7FC23332B847.subtitle}"
 			tasks: [{
 				id: "380954E57B7C36EC"
 				title: "{moni.task.380954E57B7C36EC.hardmode}"
 				type: "checkmark"
 			}]
-			title: "{moni.quest.07DC7FC23332B847.title.hardmode}"
+			title: "{moni.quest.07DC7FC23332B847.title}"
 			x: 1.75d
 			y: 0.5d
 		}
@@ -421,7 +429,7 @@
 				""
 				"{moni.quest.0C173EF148EFEF8E.description3.hardmode}"
 			]
-			icon: "kubejs:mote_of_omnium"
+			icon: "gtceu:omnium_ingot"
 			id: "0C173EF148EFEF8E"
 			tasks: [{
 				id: "647D560D77DBCEA5"
@@ -434,13 +442,11 @@
 		{
 			dependencies: ["2E8BFA2E719B1C47"]
 			description: [
-				"{moni.quest.64AAF0CD958D836A.description1}"
+				"{moni.quest.64AAF0CD958D836A.description1.hardmode}"
 				""
 				"{moni.quest.64AAF0CD958D836A.description2}"
 				""
 				"{moni.quest.64AAF0CD958D836A.description3}"
-				""
-				"{moni.quest.64AAF0CD958D836A.description4}"
 			]
 			id: "64AAF0CD958D836A"
 			rewards: [{
@@ -684,10 +690,10 @@
 				Count: 1
 				id: "gtceu:wrought_iron_wire_cutter"
 				tag: {
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: { }
 					GT.Tool: {
-						Damage: 0
 						HarvestLevel: 2
 						MaxDamage: 383
 						ToolSpeed: 6.0f
@@ -712,9 +718,7 @@
 						id: "gtceu:wrought_iron_hammer"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -726,9 +730,7 @@
 						id: "gtceu:wrought_iron_file"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -740,9 +742,7 @@
 						id: "gtceu:wrought_iron_saw"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -754,9 +754,7 @@
 						id: "gtceu:wrought_iron_wrench"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -768,9 +766,7 @@
 						id: "gtceu:wrought_iron_screwdriver"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -782,9 +778,7 @@
 						id: "gtceu:wrought_iron_wire_cutter"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -796,9 +790,7 @@
 						id: "gtceu:wrought_iron_mortar"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -820,9 +812,7 @@
 				id: "gtceu:iron_mining_hammer"
 				tag: {
 					Damage: 0
-					GT.Tool: {
-						Damage: 0
-					}
+					GT.Tool: { }
 				}
 			}
 			id: "07D45A3F8A74A61C"
@@ -857,13 +847,13 @@
 				Count: 1
 				id: "gtceu:iron_axe"
 				tag: {
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: {
 						DisableShields: 1b
 						TreeFelling: 1b
 					}
 					GT.Tool: {
-						Damage: 0
 						HarvestLevel: 2
 						MaxDamage: 255
 						ToolSpeed: 4.0f
@@ -920,9 +910,7 @@
 						id: "gtceu:wrought_iron_wrench"
 						tag: {
 							Damage: 0
-							GT.Tool: {
-								Damage: 0
-							}
+							GT.Tool: { }
 						}
 					}
 					type: "item"
@@ -1389,7 +1377,7 @@
 				"{moni.quest.12B95158E4C792DB.description3}"
 				"{moni.quest.12B95158E4C792DB.description4}"
 				""
-				"{moni.quest.12B95158E4C792DB.description5.hardmode}"
+				"{moni.quest.12B95158E4C792DB.description5}"
 			]
 			id: "12B95158E4C792DB"
 			rewards: [{
@@ -1664,7 +1652,8 @@
 				"{moni.quest.08948A23B3A17923.description2}"
 				""
 				"{moni.quest.08948A23B3A17923.description3}"
-			]			icon: "laserio:energy_overclocker_card_tier_1"
+			]
+			icon: "laserio:energy_overclocker_card_tier_1"
 			id: "08948A23B3A17923"
 			rewards: [
 				{
@@ -1749,7 +1738,6 @@
 				item: "kubejs:moni_nickel"
 				type: "item"
 			}]
-			shape: "hexagon"
 			subtitle: "{moni.quest.297B523B6C503957.subtitle.hardmode}"
 			tasks: [{
 				id: "3217FC6AD2AFA67A"
@@ -1781,11 +1769,15 @@
 				type: "item"
 			}]
 			title: "{moni.quest.297B523B6C503957.title}"
-			x: 0.0d
+			x: -0.75d
 			y: 15.5d
 		}
 		{
-			dependencies: ["297B523B6C503957"]
+			dependencies: [
+				"297B523B6C503957"
+				"34876F54406B6A04"
+			]
+			dependency_requirement: "one_completed"
 			description: ["{moni.quest.2FA9404468E4BBD9.description1}"]
 			id: "2FA9404468E4BBD9"
 			rewards: [{
@@ -1818,7 +1810,7 @@
 				type: "item"
 			}]
 			title: "{moni.quest.2FA9404468E4BBD9.title}"
-			x: 1.5d
+			x: 2.0d
 			y: 15.5d
 		}
 		{
@@ -1836,6 +1828,7 @@
 				item: "kubejs:moni_nickel"
 				type: "item"
 			}]
+			shape: "hexagon"
 			tasks: [{
 				count: 4L
 				id: "7923DEDAB3298371"
@@ -1843,11 +1836,15 @@
 				type: "item"
 			}]
 			title: "{moni.quest.077AA27F26B7831F.title}"
-			x: 2.75d
+			x: 3.25d
 			y: 15.5d
 		}
 		{
-			dependencies: ["297B523B6C503957"]
+			dependencies: [
+				"297B523B6C503957"
+				"34876F54406B6A04"
+			]
+			dependency_requirement: "one_completed"
 			description: [
 				"{moni.quest.06E9B9DDDB245F38.description1}"
 				""
@@ -1898,7 +1895,7 @@
 				type: "item"
 			}]
 			title: "{moni.quest.06E9B9DDDB245F38.title}"
-			x: -1.5d
+			x: -2.0d
 			y: 15.5d
 		}
 		{
@@ -1921,6 +1918,7 @@
 				item: "kubejs:moni_nickel"
 				type: "item"
 			}]
+			shape: "hexagon"
 			tasks: [
 				{
 					id: "5EF5A8A2767A69E3"
@@ -1945,11 +1943,15 @@
 				}
 			]
 			title: "{moni.quest.3A5387B2003177B2.title}"
-			x: -2.75d
+			x: -3.25d
 			y: 15.5d
 		}
 		{
-			dependencies: ["297B523B6C503957"]
+			dependencies: [
+				"297B523B6C503957"
+				"34876F54406B6A04"
+			]
+			dependency_requirement: "one_completed"
 			description: [
 				"{moni.quest.5A94534682807314.description1}"
 				""
@@ -2272,6 +2274,44 @@
 			title: "{moni.quest.372BE3F076893D71.title}"
 			x: -9.0d
 			y: 10.0d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: [
+				"{moni.quest.5CFBE0455A242AEB.description1}"
+				""
+				"{moni.quest.5CFBE0455A242AEB.description2}"
+				""
+				"{moni.quest.5CFBE0455A242AEB.description3}"
+				""
+				"{moni.quest.5CFBE0455A242AEB.description4}"
+			]
+			id: "5CFBE0455A242AEB"
+			shape: "hexagon"
+			tasks: [{
+				id: "7BC2DC471C278E85"
+				type: "checkmark"
+			}]
+			title: "{moni.quest.5CFBE0455A242AEB.title}"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["66FCC26399376B55"]
+			description: ["{moni.quest.259CC99CE1FB22A9.description1}"]
+			hide_dependency_lines: true
+			id: "259CC99CE1FB22A9"
+			tasks: [{
+				id: "41C9DB62EB31D192"
+				item: {
+					Count: 1
+					id: "naturescompass:naturescompass"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -10.5d
+			y: 4.0d
 		}
 	]
 	title: "{moni.chapter.0654B76C306712BE.hardmode.title}"
