@@ -56,21 +56,20 @@ ServerEvents.recipes(event => {
         "IFI",
         "TTT"
     ], {
-        I: "gtceu:dark_soularium_ingot",
+        I: "gtceu:double_dark_soularium_plate",
         C: "laserio:energy_overclocker_card_tier_8",
-        F: "kubejs:flight_control_unit",
+        F: "enderio:weather_crystal",
         T: Item.of("kubejs:vibrant_thruster").weakNBT()
     }).id("kubejs:ironjetpacks/thrusters/dark_soularium");
 
     // Fluxed
     event.shaped(Item.of("kubejs:fluxed_thruster"), [
         " P ",
-        "PGP",
+        "PSP",
         "STS"
     ], {
         P: "redstone_arsenal:flux_plating",
-        G: "kubejs:glowstone_elevation_unit",
-        S: "gtceu:signalum_plate",
+        S: "gtceu:double_signalum_plate",
         T: Item.of("kubejs:resonant_thruster").weakNBT()
     }).id("kubejs:ironjetpacks/thrusters/fluxed");
 
@@ -154,68 +153,31 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembly_line("kubejs:ironjetpacks/upgrade/dark_soularium")
         .itemInputs(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:vibrant"}').weakNBT(), "gtceu:dark_soularium_block", "better_angel_ring:angel_ring", "2x enderio:ender_crystal", "kubejs:double_compressed_octadic_capacitor", "4x #gtceu:circuits/luv", Item.of("kubejs:dark_soularium_thruster", 2))
-        .inputFluids("gtceu:soldering_alloy 1152")
+        .inputFluids("gtceu:advanced_soldering_alloy 1152")
         .itemOutputs(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:dark_soularium"}').strongNBT())
         .duration(3000)
-        .EUt(30720)
-        .stationResearch(b => b.researchStack(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:vibrant"}')).EUt(3686).CWUt(64))
+        .EUt(GTValues.VA[GTValues.LuV])
+        .stationResearch(b => b
+            .researchStack(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:vibrant"}'))
+            .EUt(GTValues.VHA[GTValues.IV])
+            .CWUt(64))
         .modifyResult(copyOldJetpackData)
 
     event.recipes.gtceu.assembly_line("kubejs:ironjetpacks/upgrade/fluxed")
-        .itemInputs(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:resonant"}').weakNBT(), "redstone_arsenal:flux_chestplate", "kubejs:cryotheum_coolant_unit", "better_angel_ring:angel_ring", "2x kubejs:compressed_octadic_capacitor", "3x #gtceu:circuits/luv", Item.of("kubejs:fluxed_thruster", 2))
-        .inputFluids("gtceu:soldering_alloy 1152")
+        .itemInputs(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:resonant"}').weakNBT(), "redstone_arsenal:flux_chestplate", "better_angel_ring:angel_ring", "2x kubejs:compressed_octadic_capacitor", "3x #gtceu:circuits/luv", Item.of("kubejs:fluxed_thruster", 2))
+        .inputFluids("gtceu:advanced_soldering_alloy 1152", "kubejs:molten_cryotheum 10000")
         .itemOutputs(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:fluxed"}').strongNBT())
         .duration(3000)
-        .EUt(30720)
+        .EUt(GTValues.VA[GTValues.LuV])
         .stationResearch(b => b
             .researchStack(Item.of("ironjetpacks:jetpack", '{Id:"ironjetpacks:resonant"}'))
-            .EUt(3686)
+            .EUt(GTValues.VHA[GTValues.IV])
             .CWUt(64))
         .modifyResult(copyOldJetpackData)
 
     //
     // Misc
     //
-    event.shaped("kubejs:empty_fluxed_jetpack_unit", [
-        "ABA",
-        "BCB",
-        "ABA"
-    ], {
-        A: "gtceu:electrum_flux_ingot",
-        B: "gtceu:signalum_ingot",
-        C: "enderio:fused_quartz"
-    }).id("kubejs:ironjetpacks/misc/empty_fluxed_jetpack_unit");
-
-    event.shaped("kubejs:empty_soularium_jetpack_unit", [
-        "ABA",
-        "BCB",
-        "ABA"
-    ], {
-        A: "gtceu:dark_soularium_ingot",
-        B: "gtceu:electrical_steel_ingot",
-        C: "enderio:fused_quartz"
-    }).id("kubejs:ironjetpacks/misc/empty_soularium_jetpack_unit");
-
-    event.recipes.gtceu.canner("kubejs:ironjetpacks/misc/flight_control_unit")
-        .itemInputs("kubejs:empty_soularium_jetpack_unit", "4x minecraft:ghast_tear")
-        .itemOutputs("kubejs:flight_control_unit")
-        .duration(100)
-        .EUt(2000)
-
-    event.recipes.gtceu.canner("kubejs:ironjetpacks/misc/glowstone_elevation_unit")
-        .itemInputs("kubejs:empty_fluxed_jetpack_unit")
-        .inputFluids("gtceu:glowstone 4032")
-        .itemOutputs("kubejs:glowstone_elevation_unit")
-        .duration(100)
-        .EUt(2000)
-
-    event.recipes.gtceu.canner("kubejs:ironjetpacks/misc/cyrotheum_coolant_unit")
-        .itemInputs("kubejs:empty_fluxed_jetpack_unit")
-        .inputFluids("kubejs:molten_cryotheum 6000")
-        .itemOutputs("kubejs:cryotheum_coolant_unit")
-        .duration(100)
-        .EUt(2000)
-
 
     // Cells, thermal exp.
     event.shaped(Item.of("ironjetpacks:cell", '{Id:"ironjetpacks:hardened"}').strongNBT(), [

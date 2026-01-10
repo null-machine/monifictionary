@@ -73,8 +73,8 @@ ServerEvents.recipes(event => {
 
     // //// Trees //////
     Greenhouse("gtceu", "rubber_sapling", 1280, ["32x gtceu:rubber_log", "8x gtceu:sticky_resin"], 4)
-    Greenhouse("minecraft", "oak_sapling", 1280, ["64x minecraft:oak_log"], 4)
-    Greenhouse("minecraft", "dark_oak_sapling", 1280, ["64x minecraft:dark_oak_log"], 4)
+    Greenhouse("minecraft", "oak_sapling", 1280, ["64x minecraft:oak_log", "4x minecraft:apple"], 4)
+    Greenhouse("minecraft", "dark_oak_sapling", 1280, ["64x minecraft:dark_oak_log", "4x minecraft:apple"], 4)
     Greenhouse("minecraft", "spruce_sapling", 1280, ["64x minecraft:spruce_log"], 4)
     Greenhouse("minecraft", "birch_sapling", 1280, ["64x minecraft:birch_log"], 4)
     Greenhouse("minecraft", "acacia_sapling", 1280, ["64x minecraft:acacia_log"], 4)
@@ -129,7 +129,6 @@ ServerEvents.recipes(event => {
         "oxeye_daisy",
         "azure_bluet",
         "white_tulip",
-        "pitcher_plant",
         "lily_pad",
         "weeping_vines",
         "twisting_vines",
@@ -145,8 +144,11 @@ ServerEvents.recipes(event => {
     flowers.forEach(flower => {
         Greenhouse("minecraft", flower, 640, [Item.of(flower, 48)], 0);
     })
-    // Torchflowers are grown from seeds
-    Greenhouse("minecraft", "torchflower_seeds", 640, [Item.of("torchflower", 48)], 0);
+
+    // Torchflowers, Pitcher plants are grown from seeds
+    Greenhouse("minecraft", "torchflower_seeds", 640, [Item.of("torchflower", 12), Item.of("torchflower_seeds", 6)], 0);
+    Greenhouse("minecraft", "pitcher_pod", 640, [Item.of("pitcher_plant", 12), Item.of("pitcher_pod", 6)], 0);
+
     // A way to get grass blocks
     event.recipes.gtceu.greenhouse("kubejs:grass_block")
         .circuit(1)

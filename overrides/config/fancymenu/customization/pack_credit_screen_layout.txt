@@ -267,7 +267,7 @@ element {
 }
 
 element {
-    description = Xefyr0 - Contributor
+    description = Xefyr0 - Lead Developer
     element_type = custom_button
     instance_identifier = a3b08192-f19b-4037-abcd-15093454d905-button
     backgroundnormal = [source:local]/config/fancymenu/assets/button.bg.png
@@ -322,7 +322,7 @@ element {
 }
 
 element {
-    description = WithersChat - Contributor, Artist
+    description = WithersChat - Lead Developer, Artist
     element_type = custom_button
     instance_identifier = 13d0aeda-c1e9-4d91-a9b7-4d4e6a19128e-button
     backgroundnormal = [source:local]/config/fancymenu/assets/button.bg.png
@@ -1281,6 +1281,226 @@ element {
 }
 element {
     copy_client_player = false
+    playername = 39cdf546-0ad3-444e-89aa-d8e69cc3ed3a
+    auto_skin = true
+    auto_cape = true
+    slim = false
+    skin_source = 39cdf546-0ad3-444e-89aa-d8e69cc3ed3a
+    scale = 15
+    is_baby = false
+    crouching = false
+    showname = false
+    head_follows_mouse = false
+    body_follows_mouse = false
+    headrotationx = -26.470589
+    headrotationy = 0.0
+    bodyrotationx = -26.470589
+    bodyrotationy = -26.470589
+    head_z_rot = 0.0
+    left_arm_x_rot = 0.0
+    left_arm_y_rot = 0.0
+    left_arm_z_rot = 0.0
+    right_arm_x_rot = 0.0
+    right_arm_y_rot = 0.0
+    right_arm_z_rot = 0.0
+    left_leg_x_rot = 0.0
+    left_leg_y_rot = 0.0
+    left_leg_z_rot = 0.0
+    right_leg_x_rot = 0.0
+    right_leg_y_rot = 0.0
+    right_leg_z_rot = 0.0
+    element_type = fancymenu_customization_player_entity
+    instance_identifier = 39cdf546-0ad3-444e-89aa-d8e69cc3ed3a-player
+    base_opacity = 1.0
+    x = 75
+    y = 70
+    width = 9
+    height = 27
+    anchor_point = top-left
+}
+
+element {
+    description = PlasmaticVoid - Contributor
+    element_type = custom_button
+    instance_identifier = 39cdf546-0ad3-444e-89aa-d8e69cc3ed3a-button
+    backgroundnormal = [source:local]/config/fancymenu/assets/button.bg.png
+    backgroundhovered = [source:local]/config/fancymenu/assets/button.bg.png
+    navigatable = true
+    appearance_delay_seconds = 1.0
+    base_opacity = 1.0
+    x = 69
+    y = 75
+    width = 21
+    height = 19
+    anchor_point = top-left
+}
+element {
+    copy_client_player = false
+    playername = 7232227b-06b4-4384-90a7-8d749198ee5e
+    auto_skin = true
+    auto_cape = true
+    slim = false
+    skin_source = 7232227b-06b4-4384-90a7-8d749198ee5e
+    scale = 15
+    is_baby = false
+    crouching = false
+    showname = false
+    head_follows_mouse = false
+    body_follows_mouse = false
+    headrotationx = -26.470589
+    headrotationy = 0.0
+    bodyrotationx = -26.470589
+    bodyrotationy = -26.470589
+    head_z_rot = 0.0
+    left_arm_x_rot = 0.0
+    left_arm_y_rot = 0.0
+    left_arm_z_rot = 0.0
+    right_arm_x_rot = 0.0
+    right_arm_y_rot = 0.0
+    right_arm_z_rot = 0.0
+    left_leg_x_rot = 0.0
+    left_leg_y_rot = 0.0
+    left_leg_z_rot = 0.0
+    right_leg_x_rot = 0.0
+    right_leg_y_rot = 0.0
+    right_leg_z_rot = 0.0
+    element_type = fancymenu_customization_player_entity
+    instance_identifier = 7232227b-06b4-4384-90a7-8d749198ee5e-player
+    base_opacity = 1.0
+    x = 100
+    y = 70
+    width = 9
+    height = 27
+    anchor_point = top-left
+}
+
+element {
+    description = Apoptosis - Contributor
+    element_type = custom_button
+    instance_identifier = 7232227b-06b4-4384-90a7-8d749198ee5e-button
+    backgroundnormal = [source:local]/config/fancymenu/assets/button.bg.png
+    backgroundhovered = [source:local]/config/fancymenu/assets/button.bg.png
+    navigatable = true
+    appearance_delay_seconds = 1.0
+    base_opacity = 1.0
+    x = 94
+    y = 75
+    width = 21
+    height = 19
+    anchor_point = top-left
+}
+element {
+    copy_client_player = false
+    playername = 4489fe82-3980-4cb1-b792-4f66cc629bca
+    auto_skin = true
+    auto_cape = true
+    slim = false
+    skin_source = 4489fe82-3980-4cb1-b792-4f66cc629bca
+    scale = 15
+    is_baby = false
+    crouching = false
+    showname = false
+    head_follows_mouse = false
+    body_follows_mouse = false
+    headrotationx = -26.470589
+    headrotationy = 0.0
+    bodyrotationx = -26.470589
+    bodyrotationy = -26.470589
+    head_z_rot = 0.0
+    left_arm_x_rot = 0.0
+    left_arm_y_rot = 0.0
+    left_arm_z_rot = 0.0
+    right_arm_x_rot = 0.0
+    right_arm_y_rot = 0.0
+    right_arm_z_rot = 0.0
+    left_leg_x_rot = 0.0
+    left_leg_y_rot = 0.0
+    left_leg_z_rot = 0.0
+    right_leg_x_rot = 0.0
+    right_leg_y_rot = 0.0
+    right_leg_z_rot = 0.0
+    element_type = fancymenu_customization_player_entity
+    instance_identifier = 4489fe82-3980-4cb1-b792-4f66cc629bca-player
+    base_opacity = 1.0
+    x = 125
+    y = 70
+    width = 9
+    height = 27
+    anchor_point = top-left
+}
+
+element {
+    description = cewlboi - Contributor
+    element_type = custom_button
+    instance_identifier = 4489fe82-3980-4cb1-b792-4f66cc629bca-button
+    backgroundnormal = [source:local]/config/fancymenu/assets/button.bg.png
+    backgroundhovered = [source:local]/config/fancymenu/assets/button.bg.png
+    navigatable = true
+    appearance_delay_seconds = 1.0
+    base_opacity = 1.0
+    x = 119
+    y = 75
+    width = 21
+    height = 19
+    anchor_point = top-left
+}
+element {
+    copy_client_player = false
+    playername = 5b8c0732-3823-4820-8611-019fe709b2d5
+    auto_skin = true
+    auto_cape = true
+    slim = false
+    skin_source = 5b8c0732-3823-4820-8611-019fe709b2d5
+    scale = 15
+    is_baby = false
+    crouching = false
+    showname = false
+    head_follows_mouse = false
+    body_follows_mouse = false
+    headrotationx = -26.470589
+    headrotationy = 0.0
+    bodyrotationx = -26.470589
+    bodyrotationy = -26.470589
+    head_z_rot = 0.0
+    left_arm_x_rot = 0.0
+    left_arm_y_rot = 0.0
+    left_arm_z_rot = 0.0
+    right_arm_x_rot = 0.0
+    right_arm_y_rot = 0.0
+    right_arm_z_rot = 0.0
+    left_leg_x_rot = 0.0
+    left_leg_y_rot = 0.0
+    left_leg_z_rot = 0.0
+    right_leg_x_rot = 0.0
+    right_leg_y_rot = 0.0
+    right_leg_z_rot = 0.0
+    element_type = fancymenu_customization_player_entity
+    instance_identifier = 5b8c0732-3823-4820-8611-019fe709b2d5-player
+    base_opacity = 1.0
+    x = 150
+    y = 70
+    width = 9
+    height = 27
+    anchor_point = top-left
+}
+
+element {
+    description = DragonDuck24 - Contributor
+    element_type = custom_button
+    instance_identifier = 5b8c0732-3823-4820-8611-019fe709b2d5-button
+    backgroundnormal = [source:local]/config/fancymenu/assets/button.bg.png
+    backgroundhovered = [source:local]/config/fancymenu/assets/button.bg.png
+    navigatable = true
+    appearance_delay_seconds = 1.0
+    base_opacity = 1.0
+    x = 144
+    y = 75
+    width = 21
+    height = 19
+    anchor_point = top-left
+}
+element {
+    copy_client_player = false
     playername = justenoughitems
     auto_skin = true
     auto_cape = true
@@ -1312,7 +1532,7 @@ element {
     element_type = fancymenu_customization_player_entity
     instance_identifier = fac5486e-6f30-59cf-8dde-3a3b111622ed-player
     base_opacity = 1.0
-    x = 75
+    x = 175
     y = 70
     width = 9
     height = 27
@@ -1328,7 +1548,7 @@ element {
     navigatable = true
     appearance_delay_seconds = 1.0
     base_opacity = 1.0
-    x = 69
+    x = 169
     y = 75
     width = 21
     height = 19
@@ -1367,7 +1587,7 @@ element {
     element_type = fancymenu_customization_player_entity
     instance_identifier = fac5486e-6f30-59cf-8dde-3a3b111622ed-player
     base_opacity = 1.0
-    x = 100
+    x = 200
     y = 70
     width = 9
     height = 27
@@ -1383,7 +1603,7 @@ element {
     navigatable = true
     appearance_delay_seconds = 1.0
     base_opacity = 1.0
-    x = 94
+    x = 194
     y = 75
     width = 21
     height = 19
@@ -1422,7 +1642,7 @@ element {
     element_type = fancymenu_customization_player_entity
     instance_identifier = fac5486e-6f30-59cf-8dde-3a3b111622ed-player
     base_opacity = 1.0
-    x = 125
+    x = 225
     y = 70
     width = 9
     height = 27
@@ -1438,7 +1658,7 @@ element {
     navigatable = true
     appearance_delay_seconds = 1.0
     base_opacity = 1.0
-    x = 119
+    x = 219
     y = 75
     width = 21
     height = 19
@@ -1477,7 +1697,7 @@ element {
     element_type = fancymenu_customization_player_entity
     instance_identifier = fac5486e-6f30-59cf-8dde-3a3b111622ed-player
     base_opacity = 1.0
-    x = 150
+    x = 250
     y = 70
     width = 9
     height = 27
@@ -1493,7 +1713,7 @@ element {
     navigatable = true
     appearance_delay_seconds = 1.0
     base_opacity = 1.0
-    x = 144
+    x = 244
     y = 75
     width = 21
     height = 19

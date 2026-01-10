@@ -12,7 +12,7 @@
 			id: "5B0F1DA574E0A141"
 			linked_quest: "6ABF927014F8B79D"
 			x: 10.5d
-			y: 0.5d
+			y: 0.0d
 		}
 		{
 			id: "7584F9D503A3180E"
@@ -51,6 +51,20 @@
 			size: 2.0d
 			x: 5.0d
 			y: -7.5d
+		}
+		{
+			id: "30E5F898D55B37A7"
+			linked_quest: "491180694DA10086"
+			shape: "hexagon"
+			size: 2.0d
+			x: 7.0d
+			y: -5.5d
+		}
+		{
+			id: "4373D49C9462A56A"
+			linked_quest: "2C89DAD26E08E382"
+			x: 8.25d
+			y: 5.0d
 		}
 	]
 	quests: [
@@ -388,7 +402,6 @@
 				"{moni.quest.3EDD0A986384F2A7.description7}"
 				"{moni.quest.3EDD0A986384F2A7.description8}"
 				"{moni.quest.3EDD0A986384F2A7.description9}"
-				"{moni.quest.3EDD0A986384F2A7.description10}"
 			]
 			icon: "gtceu:lv_bender"
 			id: "3EDD0A986384F2A7"
@@ -737,6 +750,7 @@
 				"47094A5717952699"
 				"273F3F8DD6A3DCC5"
 				"134AD7825E3324B4"
+				"68897FC5F720BB4F"
 			]
 			description: [
 				"{moni.quest.63ADD9B48834AA39.description1}"
@@ -1038,8 +1052,6 @@
 				"{moni.quest.500E619D568C07C2.description3}"
 				""
 				"{moni.quest.500E619D568C07C2.description4}"
-				""
-				"{moni.quest.500E619D568C07C2.description5}"
 			]
 			icon: "gtceu:lv_arc_furnace"
 			id: "500E619D568C07C2"
@@ -1075,7 +1087,7 @@
 			}]
 			title: "{moni.quest.500E619D568C07C2.title}"
 			x: 1.0d
-			y: 3.0d
+			y: 3.25d
 		}
 		{
 			dependencies: ["0EDFB0C24B9129AB"]
@@ -1181,6 +1193,7 @@
 				"74B5CA5A48CE7B39"
 				"29A487F0BC43AAF9"
 			]
+			description: ["{moni.quest.3BD20358F137E7C6.description1}"]
 			id: "3BD20358F137E7C6"
 			shape: "hexagon"
 			tasks: [{
@@ -1188,6 +1201,7 @@
 				item: "gtceu:dark_steel_ingot"
 				type: "item"
 			}]
+			title: "{moni.quest.3BD20358F137E7C6.title}"
 			x: 5.0d
 			y: -2.5d
 		}
@@ -1202,8 +1216,6 @@
 				"{moni.quest.41C2E49E70D76330.description2}"
 				""
 				"{moni.quest.41C2E49E70D76330.description3}"
-				""
-				"{moni.quest.41C2E49E70D76330.description4}"
 			]
 			hide_until_deps_visible: true
 			icon: "gtceu:steam_grinder"
@@ -1289,7 +1301,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["2E8BFA2E719B1C47"]
 			description: [
 				"{moni.quest.74B5CA5A48CE7B39.description1}"
 				""
@@ -1319,6 +1330,8 @@
 				"{moni.quest.1CA6D620309F2B9E.description1}"
 				""
 				"{moni.quest.1CA6D620309F2B9E.description2}"
+				""
+				"{moni.quest.1CA6D620309F2B9E.description3}"
 			]
 			icon: "enderio:grains_of_infinity"
 			id: "1CA6D620309F2B9E"
@@ -1330,7 +1343,7 @@
 			shape: "hexagon"
 			tasks: [
 				{
-					id: "4A822DF50CD59532"
+					id: "1E07B0FCC2B8D3EF"
 					item: {
 						Count: 1
 						id: "minecraft:flint_and_steel"
@@ -1341,7 +1354,7 @@
 					type: "item"
 				}
 				{
-					id: "1E07B0FCC2B8D3EF"
+					id: "6E822A9514AED405"
 					item: "enderio:grains_of_infinity"
 					type: "item"
 				}
@@ -1379,50 +1392,6 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["6D03BB4A6A4BBA27"]
-			description: [
-				"{moni.quest.4174A6C6403DD245.description1}"
-				""
-				"{moni.quest.4174A6C6403DD245.description2}"
-				""
-				"{moni.quest.4174A6C6403DD245.description3}"
-				"{@pagebreak}"
-				"{moni.quest.4174A6C6403DD245.description4}"
-				""
-				"[\"\",{\"translate\":\"moni.quest.4174A6C6403DD245.rich_description1\"},{\"color\":\"blue\",\"underlined\":true,\"translate\":\"moni.quest.4174A6C6403DD245.rich_description2\",\"clickEvent\":{\"action\":\"copy_to_clipboard\",\"value\":\"https://www.youtube.com/watch?v=u0ouTWgdcXk\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":{\"translate\":\"moni.quest.4174A6C6403DD245.rich_description.hover_text2\"}}},{\"translate\":\"moni.quest.4174A6C6403DD245.rich_description3\"}]"
-			]
-			icon: "ae2:energy_acceptor"
-			id: "4174A6C6403DD245"
-			rewards: [
-				{
-					id: "67642A41B1F7F4E8"
-					item: "kubejs:moni_nickel"
-					type: "item"
-				}
-				{
-					id: "2EAC8635F1C7A8DB"
-					item: "ae2:guide"
-					type: "item"
-				}
-			]
-			shape: "hexagon"
-			size: 2.0d
-			tasks: [
-				{
-					id: "652709622C84E4CC"
-					item: "ae2:energy_acceptor"
-					type: "item"
-				}
-				{
-					id: "3550456A821A6975"
-					item: "gtceu:fluix_gem"
-					type: "item"
-				}
-			]
-			x: 7.0d
-			y: -6.0d
-		}
-		{
 			dependencies: ["025543EDB0A4AC22"]
 			description: [
 				"{moni.quest.7842EC1C389C4B7E.description1}"
@@ -1443,27 +1412,6 @@
 			title: "{moni.quest.7842EC1C389C4B7E.title}"
 			x: 9.0d
 			y: 0.0d
-		}
-		{
-			dependencies: ["7842EC1C389C4B7E"]
-			description: [
-				"{moni.quest.2845151447537433.description1}"
-				""
-				"{moni.quest.2845151447537433.description2}"
-			]
-			id: "2845151447537433"
-			rewards: [{
-				id: "38218FE6AA47BF71"
-				item: "kubejs:moni_nickel"
-				type: "item"
-			}]
-			tasks: [{
-				id: "61E7629E44901031"
-				item: "enderio:basic_capacitor_bank"
-				type: "item"
-			}]
-			x: 10.5d
-			y: -0.5d
 		}
 		{
 			dependencies: ["62BBD1F6767A4D90"]
@@ -1536,12 +1484,19 @@
 				{
 					id: "47392B270D61CD4C"
 					item: "gtceu:hydrogen_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "7F2D244D03684EB3"
 					item: "gtceu:oxygen_bucket"
+					optional_task: true
 					type: "item"
+				}
+				{
+					id: "0BD8CFAB2DB4AF72"
+					optional_task: true
+					type: "checkmark"
 				}
 			]
 			title: "{moni.quest.6FE99EDDC6223F2E.title}"
@@ -1582,7 +1537,6 @@
 				"7A7907EE1F3FCFBF"
 				"0B5613CC79261800"
 			]
-			dependency_requirement: "one_completed"
 			description: [
 				"{moni.quest.3AB0402B19DD5BA8.description1}"
 				""
@@ -1593,6 +1547,7 @@
 				"{moni.quest.3AB0402B19DD5BA8.description4}"
 			]
 			id: "3AB0402B19DD5BA8"
+			min_required_dependencies: 2
 			rewards: [{
 				id: "5155898EDA908A3F"
 				item: "kubejs:moni_nickel"
@@ -1842,8 +1797,6 @@
 				"{moni.quest.1DBBE96165C7987D.description2}"
 				""
 				"{moni.quest.1DBBE96165C7987D.description3}"
-				""
-				"{moni.quest.1DBBE96165C7987D.description4}"
 			]
 			icon: "gtceu:lv_mixer"
 			id: "1DBBE96165C7987D"
@@ -1899,11 +1852,20 @@
 				item: "kubejs:moni_nickel"
 				type: "item"
 			}]
-			tasks: [{
-				id: "00DCE69057EC3D8F"
-				item: "gtceu:soldering_alloy_dust"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "00DCE69057EC3D8F"
+					item: "gtceu:soldering_alloy_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "424B2600A9124D11"
+					item: "gtceu:soldering_alloy_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
 			title: "{moni.quest.56924FC6B029BA0F.title}"
 			x: -2.0d
 			y: 11.0d
@@ -1927,6 +1889,8 @@
 				"{moni.quest.0523F4AB9A794390.description7}"
 				""
 				"{moni.quest.0523F4AB9A794390.description8}"
+				""
+				"{moni.quest.0523F4AB9A794390.description9}"
 			]
 			hide_dependency_lines: true
 			icon: "gtceu:maintenance_hatch"
@@ -1948,7 +1912,6 @@
 				"{moni.quest.18D8D18C4494C587.description2}"
 				""
 				"{moni.quest.18D8D18C4494C587.description3}"
-				""
 				"{moni.quest.18D8D18C4494C587.description4}"
 				""
 				"{moni.quest.18D8D18C4494C587.description5}"
@@ -1990,6 +1953,8 @@
 				"{moni.quest.1A427A8CB43C8B59.description10}"
 				""
 				"{moni.quest.1A427A8CB43C8B59.description11}"
+				""
+				"{moni.quest.1A427A8CB43C8B59.description13}"
 				""
 				"{moni.quest.1A427A8CB43C8B59.description12}"
 			]
@@ -2247,10 +2212,6 @@
 							}
 							{
 								Count: 1b
-								id: "sophisticatedstorage:iron_to_diamond_tier_upgrade"
-							}
-							{
-								Count: 1b
 								id: "sophisticatedstorage:gold_to_diamond_tier_upgrade"
 							}
 						]
@@ -2401,7 +2362,7 @@
 			}]
 			title: "{moni.quest.5B52FFEBF5D65C20.title}"
 			x: -9.0d
-			y: 5.0d
+			y: 9.0d
 		}
 		{
 			dependencies: [
@@ -2422,7 +2383,6 @@
 					GT.Tool: {
 						AttackDamage: 0.0f
 						AttackSpeed: -2.4f
-						Damage: 0
 						MaxDamage: 128
 					}
 				}
@@ -2446,12 +2406,12 @@
 								Count: 1b
 								id: "gtceu:wood_mallet"
 								tag: {
+									Damage: 0
 									DisallowContainerItem: 0b
 									GT.Behaviours: { }
 									GT.Tool: {
 										AttackDamage: 0.0f
 										AttackSpeed: -2.4f
-										Damage: 0
 										MaxDamage: 127
 									}
 									HideFlags: 2
@@ -2461,10 +2421,10 @@
 								Count: 1b
 								id: "gtceu:rubber_mallet"
 								tag: {
+									Damage: 0
 									DisallowContainerItem: 0b
 									GT.Behaviours: { }
 									GT.Tool: {
-										Damage: 0
 										MaxDamage: 127
 									}
 									HideFlags: 2
@@ -2474,10 +2434,10 @@
 								Count: 1b
 								id: "gtceu:polytetrafluoroethylene_mallet"
 								tag: {
+									Damage: 0
 									DisallowContainerItem: 0b
 									GT.Behaviours: { }
 									GT.Tool: {
-										Damage: 0
 										MaxDamage: 127
 									}
 									HideFlags: 2
@@ -2487,12 +2447,12 @@
 								Count: 1b
 								id: "gtceu:polyethylene_mallet"
 								tag: {
+									Damage: 0
 									DisallowContainerItem: 0b
 									GT.Behaviours: { }
 									GT.Tool: {
 										AttackDamage: 0.0f
 										AttackSpeed: -2.4f
-										Damage: 0
 										MaxDamage: 127
 									}
 									HideFlags: 2
@@ -2502,12 +2462,12 @@
 								Count: 1b
 								id: "gtceu:polybenzimidazole_mallet"
 								tag: {
+									Damage: 0
 									DisallowContainerItem: 0b
 									GT.Behaviours: { }
 									GT.Tool: {
 										AttackDamage: 0.0f
 										AttackSpeed: -2.4f
-										Damage: 0
 										MaxDamage: 127
 									}
 									HideFlags: 2
@@ -2528,7 +2488,11 @@
 				"66FCC26399376B55"
 				"1BC6DDC2D50F9C46"
 			]
-			description: ["{moni.quest.74A7ABF43D6A403F.description1}"]
+			description: [
+				"{moni.quest.74A7ABF43D6A403F.description1}"
+				""
+				"{moni.quest.74A7ABF43D6A403F.description2}"
+			]
 			disable_toast: true
 			icon: "gtceu:terminal"
 			id: "74A7ABF43D6A403F"
@@ -2704,7 +2668,6 @@
 				"{moni.quest.2861BA7C235C52A3.description10}"
 				"{moni.quest.2861BA7C235C52A3.description11}"
 				"{moni.quest.2861BA7C235C52A3.description12}"
-				"{moni.quest.2861BA7C235C52A3.description13}"
 				"{moni.quest.2861BA7C235C52A3.description14}"
 				"{moni.quest.2861BA7C235C52A3.description15}"
 				""
@@ -2720,7 +2683,6 @@
 				"{moni.quest.2861BA7C235C52A3.description24}"
 				"{moni.quest.2861BA7C235C52A3.description25}"
 				"{moni.quest.2861BA7C235C52A3.description26}"
-				"{moni.quest.2861BA7C235C52A3.description27}"
 			]
 			icon: "gtceu:energetic_alloy_octal_wire"
 			id: "2861BA7C235C52A3"
@@ -2732,6 +2694,29 @@
 			title: "{moni.quest.2861BA7C235C52A3.title}"
 			x: 3.5d
 			y: 10.0d
+		}
+		{
+			dependencies: ["1BC6DDC2D50F9C46"]
+			description: [
+				"{moni.quest.114B300F56E48351.description1}"
+				""
+				"{moni.quest.114B300F56E48351.description2}"
+				""
+				"{moni.quest.114B300F56E48351.description3}"
+			]
+			id: "114B300F56E48351"
+			shape: "hexagon"
+			tasks: [{
+				id: "17D47466DED091B3"
+				item: {
+					Count: 1
+					id: "shrink:shrinking_device"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: 7.75d
 		}
 	]
 	title: "{moni.chapter.2763DAD954E0EED8.title}"

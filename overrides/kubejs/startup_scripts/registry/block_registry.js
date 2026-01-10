@@ -4,8 +4,9 @@
  */
 StartupEvents.registry("block", event => {
 
-    // Compressed Blocks
+    // compressed_sand Blocks
     event.create("compressed_sand")
+        .textureAll("kubejs:block/compressed_sand/sand")
         .displayName("Compressed Sand")
         .soundType("sand")
         .resistance(1).hardness(1)
@@ -13,6 +14,7 @@ StartupEvents.registry("block", event => {
         .property(BlockProperties.FALLING);
 
     event.create("double_compressed_sand")
+        .textureAll("kubejs:block/compressed_sand/sand_double")
         .displayName("Double Compressed Sand")
         .soundType("sand")
         .resistance(2).hardness(2)
@@ -20,6 +22,7 @@ StartupEvents.registry("block", event => {
         .property(BlockProperties.FALLING);
 
     event.create("compressed_red_sand")
+        .textureAll("kubejs:block/compressed_sand/red_sand")
         .displayName("Compressed Red Sand")
         .soundType("sand")
         .resistance(1).hardness(1)
@@ -27,29 +30,12 @@ StartupEvents.registry("block", event => {
         .property(BlockProperties.FALLING);
 
     event.create("double_compressed_red_sand")
+        .textureAll("kubejs:block/compressed_sand/red_sand_double")
         .displayName("Double Compressed Red Sand")
         .soundType("sand")
         .resistance(2).hardness(2)
         .tagBlock("mineable/shovel").requiresTool(true)
         .property(BlockProperties.FALLING);
-
-    event.create("infinity_dust_block", "falling")
-        .displayName("Infinity Dust Block")
-        .soundType("sand")
-        .resistance(0.6).hardness(0.5)
-        .tagBlock("mineable/shovel").requiresTool(true);
-
-    event.create("compressed_infinity_dust_block", "falling")
-        .displayName("Compressed Infinity Dust Block")
-        .soundType("sand")
-        .resistance(1).hardness(1)
-        .tagBlock("mineable/shovel").requiresTool(true);
-
-    event.create("double_compressed_infinity_dust_block", "falling")
-        .displayName("Double Compressed Infinity Dust Block")
-        .soundType("sand")
-        .resistance(2).hardness(2)
-        .tagBlock("mineable/shovel").requiresTool(true);
 
 
     // Micro Miner Cores/Frames
@@ -114,6 +100,7 @@ StartupEvents.registry("block", event => {
         .defaultCutout();
 
     event.create("warp_core")
+        .textureAll("kubejs:block/microverse/component/warp_core")
         .displayName("Warp Core")
         .soundType("metal")
         .resistance(6).hardness(5)
@@ -122,6 +109,7 @@ StartupEvents.registry("block", event => {
         .requiresTool(true);
 
     event.create("warp_controller")
+        .textureAll("kubejs:block/microverse/component/warp_controller")
         .displayName("Warp Controller")
         .soundType("metal")
         .resistance(6).hardness(5)
@@ -130,6 +118,7 @@ StartupEvents.registry("block", event => {
         .requiresTool(true);
 
     event.create("universal_warp_core")
+        .textureAll("kubejs:block/microverse/component/universal_warp_core")
         .displayName("Universal Warp Core")
         .soundType("metal")
         .resistance(6).hardness(5)
@@ -138,6 +127,7 @@ StartupEvents.registry("block", event => {
         .requiresTool(true);
 
     event.create("universal_warp_controller")
+        .textureAll("kubejs:block/microverse/component/universal_warp_controller")
         .displayName("Universal Warp Controller")
         .soundType("metal")
         .resistance(6).hardness(5)
@@ -162,6 +152,7 @@ StartupEvents.registry("block", event => {
 
     ores.forEach(ore => {
         event.create(`dense_${ore}_ore`)
+            .textureAll(`kubejs:block/deprecated/dense_${ore}_ore`)
             .soundType("stone")
             .resistance(6)
             .hardness(5)
@@ -172,6 +163,7 @@ StartupEvents.registry("block", event => {
     });
 
     event.create("dense_magma_block")
+        .textureAll("kubejs:block/deprecated/dense_magma_block")
         .soundType("stone")
         .resistance(6)
         .hardness(5)
@@ -184,17 +176,13 @@ StartupEvents.registry("block", event => {
 
     // Machine Casings
     const casings = [
-        "microverse",
         "dark_soularium",
-        "omnic_matrix_machine",
-        "dimensional_stabilization_netherite",
-        "cryolobus",
-        "bioalloy",
-        "bioalloy_fusion",
+        "dark_steel",
     ]
 
     casings.forEach(casing => {
         event.create(`${casing}_casing`)
+            .textureAll(`kubejs:block/casing/${casing}/casing`)
             .soundType("metal")
             .resistance(6).hardness(5)
             .tagBlock("mineable/pickaxe")
@@ -202,6 +190,15 @@ StartupEvents.registry("block", event => {
             .requiresTool(true);
     });
 
+    // UEV Hermetic Casing
+    event.create("gtceu:uev_hermetic_casing")
+        .displayName("Hermetic Casing X")
+        .soundType("metal")
+        .renderType("cutout")
+        .resistance(6).hardness(5)
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("forge:mineable/wrench")
+        .requiresTool(true);
 
     // Misc
     event.create("starry_diamond_block")
@@ -209,21 +206,14 @@ StartupEvents.registry("block", event => {
         .soundType("metal")
         .resistance(6).hardness(5)
         .tagBlock("mineable/pickaxe").requiresTool(true)
-        .textureAll("kubejs:block/microverse/starry_diamond_block");
+        .textureAll("kubejs:block/deprecated/starry_diamond_block")
 
     event.create("dust", "falling")
+        .textureAll("kubejs:block/dust")
         .soundType("sand")
         .resistance(0.4).hardness(0.4)
         .tag("mineable/shovel").displayName("Dust Block")
         .property(BlockProperties.FALLING);
-
-    event.create("dark_steel_machine_hull")
-        .displayName("Dark Steel Machine Hull")
-        .soundType("metal")
-        .resistance(6).hardness(5)
-        .tagBlock("mineable/pickaxe")
-        .tagBlock("forge:mineable/wrench")
-        .requiresTool(true);
 
     event.create("excitationcoil", "cardinal")
         .displayName("Excitation Coil")
@@ -235,7 +225,41 @@ StartupEvents.registry("block", event => {
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true);
 
+    event.create("lyso_ce_glass")
+        .displayName("Cerium-doped Lutetium Yttrium Oxyorthosilicate Glass")
+        .soundType("glass")
+        .renderType("cutout")
+        .resistance(6).hardness(5)
+        .tagBlock("mineable/pickaxe")
+        .textureAll("kubejs:block/lines/prism/lyso_ce_glass")
+        .defaultCutout()
+
+    event.create("red_aligned_glass")
+        .soundType("glass")
+        .renderType("cutout")
+        .resistance(6).hardness(5)
+        .tagBlock("mineable/pickaxe")
+        .textureAll("kubejs:block/lines/prism/red_aligned_glass")
+        .defaultCutout()
+
+    event.create("green_aligned_glass")
+        .soundType("glass")
+        .renderType("cutout")
+        .resistance(6).hardness(5)
+        .tagBlock("mineable/pickaxe")
+        .textureAll("kubejs:block/lines/prism/green_aligned_glass")
+        .defaultCutout()
+
+    event.create("blue_aligned_glass")
+        .soundType("glass")
+        .renderType("cutout")
+        .resistance(6).hardness(5)
+        .tagBlock("mineable/pickaxe")
+        .textureAll("kubejs:block/lines/prism/blue_aligned_glass")
+        .defaultCutout()
+
     event.create("omnic_matrix_coil_block", "gtceu:coil")
+        .textureAll("kubejs:block/casing/omnic_matrix_machine/coil")
         .temperature(12600)
         .level(16)
         .energyDiscount(16)
@@ -253,5 +277,5 @@ StartupEvents.registry("block", event => {
         .renderType("cutout")
         .tag("mineable/pickaxe")
         .tagBlock("forge:mineable/wrench")
-        .defaultCutout();
+        .defaultCutout()
 });

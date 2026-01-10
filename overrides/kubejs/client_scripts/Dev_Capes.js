@@ -1,5 +1,5 @@
 /**
- * CODEGENERATED! To edit go to /tools/build/codegen/credits/Dev_Capes.template.js
+ * CODEGENERATED! To edit go to build/codegen/credits/Dev_Capes.template.js
  * Adds our fancy capes to contributors
  */
 CapeJS.addCapes(event => {
@@ -49,4 +49,12 @@ CapeJS.addCapes(event => {
     event.register("b2b0f67c-4db4-4286-b10d-31cebe8cdf7d", "moni")
     // NegaNote
     event.register("5042daf6-7d30-4673-97a7-d9aa58d07609", "moni")
+    // PlasmaticVoid
+    event.register("39cdf546-0ad3-444e-89aa-d8e69cc3ed3a", "moni")
+    // Apoptosis
+    event.register("7232227b-06b4-4384-90a7-8d749198ee5e", "moni")
+    // cewlboi
+    event.register("4489fe82-3980-4cb1-b792-4f66cc629bca", "moni")
+    // DragonDuck24
+    event.register("5b8c0732-3823-4820-8611-019fe709b2d5", "moni")
 })

@@ -1,4 +1,4 @@
-// priority: 900
+// priority: 800
 /*
 The fluidNukeList is used to list all IDs of fluids that should be removed from the game, or "nuked".
 While this makes it far more difficult to access the fluids and effectively obliterates them in most cases,
@@ -27,6 +27,7 @@ global.fluidNukeList = [
 
     // GregTech Modern
     "gtceu:molten_kanthal",
+    "gtceu:iron_ii_chloride",   // Removing the FluidProperty causes errors in GT's hard-coded recipes
 
     // Thermal Series
     "cofh_core:experience",
